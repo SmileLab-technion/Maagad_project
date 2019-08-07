@@ -56,7 +56,7 @@ $$\small (3) H(q)\ddot{q}+c(q,\dot{q})\dot{q}+G(q)+J^{T}F_{int}=\tau $$
 
 $$\small \dot{X}=J\dot{q},\ddot{X}=\dot{J}\dot{q}+J\ddot{q}\to \ddot{q}={{J}^{-1}}(\ddot{X}-\dot{J}\dot{q}),\dot{q}={{J}^{-1}}\dot{X} $$
 
-$$\small (4)H(q){{J}^{-1}}(\ddot{X}-\dot{J}\dot{q})+c(q,\dot{q}){{J}^{-1}}\dot{X}+G(q)+{{J}^{T}}{{F}_{int}}=\tau $$
+$$\smaller (4)H(q){{J}^{-1}}(\ddot{X}-\dot{J}\dot{q})+c(q,\dot{q}){{J}^{-1}}\dot{X}+G(q)+{{J}^{T}}{{F}_{int}}=\tau $$
 
 #### Let's define:
 
