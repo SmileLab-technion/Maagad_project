@@ -5,4 +5,4 @@ mathjax: true
 
 # Maagad_project
 
-$\lambda$
+$\x_{t}$
