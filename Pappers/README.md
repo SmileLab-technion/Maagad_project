@@ -38,34 +38,39 @@ controlling the force and controlling the position can act as Contradictory forc
 Another and better approach to this problem is to find a function connecting between force and it’s kinematics or in its scientific name impedance. In this approach we can the write contact equation as a function of the kinematics (between the surface and the manipulator) and state that when equilibrium is achieved then there is static relation between force and position.
 
 
-$$ \[(i)\,H(q)\ddot{q}+c(q,\dot{q})\dot{q}+G(q)=\tau -{{J}^{T}}{{F}_{int}}\] $$
+$$ \[(1)\,H(q)\ddot{q}+c(q,\dot{q})\dot{q}+G(q)=\tau -{{J}^{T}}{{F}_{int}}\] $$
  
 
 Insteed of looking on F external which we don't have information on we can look on it's complemantry $ F_{int}=-F_{ext}$.
 We can look on our tool as spring and damper connected to a mass.
 
-$$ (ii) F_{int}=K(x_d-x)+B(\dot{x_d}-\dot{x})+M\ddot{x_d} $$
+$$ (2) F_{int}=K(x_d-x)+B(\dot{x_d}-\dot{x})+M\ddot{x_d} $$
 
 xd in this equation can be treated as “virtual” position and can understood as the position if the contact surface resistance would have been 0.
 
 
 
-###### Finding $\tau$ :
+#### Finding $\tau$ :
 
-$(iii) H(q)\ddot{q}+c(q,\dot{q})\dot{q}+G(q)+J^{T}F_{int}=\tau $
+$$ (3) H(q)\ddot{q}+c(q,\dot{q})\dot{q}+G(q)+J^{T}F_{int}=\tau $$
 
-$ \dot{X}=J\dot{q},\ddot{X}=\dot{J}\dot{q}+J\ddot{q}\to \ddot{q}={{J}^{-1}}(\ddot{X}-\dot{J}\dot{q}),\dot{q}={{J}^{-1}}\dot{X} $
+$$ \dot{X}=J\dot{q},\ddot{X}=\dot{J}\dot{q}+J\ddot{q}\to \ddot{q}={{J}^{-1}}(\ddot{X}-\dot{J}\dot{q}),\dot{q}={{J}^{-1}}\dot{X} $$
 
-$ (iiii)H(q){{J}^{-1}}(\ddot{X}-\dot{J}\dot{q})+c(q,\dot{q}){{J}^{-1}}\dot{X}+G(q)+{{J}^{T}}{{F}_{int}}=\tau $
+$$ (4)H(q){{J}^{-1}}(\ddot{X}-\dot{J}\dot{q})+c(q,\dot{q}){{J}^{-1}}\dot{X}+G(q)+{{J}^{T}}{{F}_{int}}=\tau $$
 
-##### Let's define:
+#### Let's define:
 
 $\scriptsize (J^T)^{-1}H(q)J^{-1}=H* $ and $ \scriptsize (J^T)^{-1}(H(q)J^{-1}\dot{J}\dot{q}+c(q,\dot{q})J^{-1}\dot{X}+G(q))=h*$
 and we obtain the folowing equation:
 
-$ \tau-F_{int} = H*\ddot{x}+h* $
+$$ (5) \tau-F_{int} = H*\ddot{x}+h*  $$
 
-###### Impedance controll reduced to Inverse dynamics+PD when $\F_{int}=0$:
+If we plug (2) into equation (5) we get the folowing:
+
+$$ H*{{M}^{-1}}({{F}_{\operatorname{int}}}-K({{x}_{d}}-x)-B({{\dot{x}}_{d}}-\dot{x}))-h*+{{F}_{int}}=\tau \ $$
+
+
+##### Impedance controll reduced to Inverse dynamics+PD when $\F_{int}=0$:
 
 $ \[(5)\,H*{{M}^{-1}}(-K({{x}_{d}}-x)-B({{\dot{x}}_{d}}-\dot{x}))-h*=\tau \]$ 
 
