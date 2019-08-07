@@ -48,7 +48,7 @@ $$ (ii) F_{int}=K(x_d-x)+B(\dot{x_d}-\dot{x})+M\ddot{x_d} $$
 
 xd in this equation can be treated as “virtual” position and can understood as the position if the contact surface resistance would have been 0.
 
-####### Finding $\tau$ :
+####### Finding $$\tau$$ :
 
 $(iii)\,H(q)\ddot{q}+\underbrace{c(q,\dot{q})\dot{q}+G(q}_{h(q,\dot{q})})+{{J}^{T}}{{F}_{int}}=\tau $
 
