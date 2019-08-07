@@ -50,7 +50,7 @@ xd in this equation can be treated as “virtual” position and can understood 
 
 $$
 \begin{align}
-\sqrt{37} & =\underbrace{A}_{R} \\
+ & =\underbrace{A}_{R} \\
  & = \sqrt{\frac{73^2}{12^2}\cdot\frac{73^2-1}{73^2}} \\ 
  & = \sqrt{\frac{73^2}{12^2}}\sqrt{\frac{73^2-1}{73^2}} \\
  & = \frac{73}{12}\sqrt{1 - \frac{1}{73^2}} \\ 
