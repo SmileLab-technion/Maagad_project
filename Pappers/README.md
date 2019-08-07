@@ -67,12 +67,14 @@ $$ (5) \tau-F_{int} = H*\ddot{x}+h*  $$
 
 If we plug (2) into equation (5) we get the folowing:
 
-$$ H{M}^{-1}(F_{int}-K(x_d-x)-B(\dot{x_d}-\dot{x}))-h*+{F}_{int}=\tau $$
+$$(6) H{M}^{-1}(F_{int}-K(x_d-x)-B(\dot{x_d}-\dot{x}))-h*+{F}_{int}=\tau $$
 
 
-##### Impedance controll reduced to Inverse dynamics+PD when $\F_{int}=0$:
+##### Impedance controll reduced to Inverse dynamics+PD when $\scriptsize \F_{int}=0$:
 
-$ \[(5)\,H*{{M}^{-1}}(-K({{x}_{d}}-x)-B({{\dot{x}}_{d}}-\dot{x}))-h*=\tau \]$ 
+Let's plug (5) into (1) while setting $\scriptsize \{F}_{int}$ to 0:
+
+$ H*{{M}^{-1}}(-K({{x}_{d}}-x)-B({{\dot{x}}_{d}}-\dot{x}))+\cancel{h*}=H*\ddot{X}+\cancel{h*} $ 
 
 $$
  & (i)+(5)\,H*{{M}^{-1}}(-K({{x}_{d}}-x)-B({{{\dot{x}}}_{d}}-\dot{x}))+\cancel{h*}=H*\ddot{X}+\cancel{h*} \\ 
