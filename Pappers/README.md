@@ -41,9 +41,10 @@ Another and better approach to this problem is to find a function connecting bet
 $$ \[(i)\,H(q)\ddot{q}+c(q,\dot{q})\dot{q}+G(q)=\tau -{{J}^{T}}{{F}_{int}}\] $$
  
 
-Insteed of looking on F external which we don't have information on we can look on it's complemantry $ F_{int}=-F_{ext}$
-. We can look on our tool as spring and damper connected to a mass.
-$ \[(ii)\,{{F}_{\operatorname{int}}}=K({{x}_{d}}-x)+B({{\dot{x}}_{d}}-\dot{x})+M{{\ddot{x}}_{d}}\]$  xd in this equation can be treated as “virtual” position and can understood as the position if the contact surface resistance would have been 0.
+Insteed of looking on F external which we don't have information on we can look on it's complemantry $ F_{int}=-F_{ext}$.
+We can look on our tool as spring and damper connected to a mass.
+$$ \[(ii)\,{{F}_{\operatorname{int}}}=K({{x}_{d}}-x)+B({{\dot{x}}_{d}}-\dot{x})+M{{\ddot{x}}_{d}}\] $$ 
+xd in this equation can be treated as “virtual” position and can understood as the position if the contact surface resistance would have been 0.
 
 ####### Finding $\tau$ :
 $$
