@@ -50,7 +50,7 @@ xd in this equation can be treated as “virtual” position and can understood 
 
 $
 \underbrace{A}_{R} \\
-& \underbrace{A}_{R}
+\underbrace{A}_{R}
 $
 
 ###### Finding $\tau$ :
