@@ -62,7 +62,7 @@ $ (iiii)H(q){{J}^{-1}}(\ddot{X}-\dot{J}\dot{q})+c(q,\dot{q}){{J}^{-1}}\dot{X}+G(
 
 
 $$ 
-\tau-F_int = \underbrace{(J^T)^{-1}H(q)J^{-1}}_{H*}\ddot{X}
+\tau-F_{int} = \underbrace{(J^T)^{-1}H(q)J^{-1}}_{H*}\ddot{X}+\underbrace{A}_{R}
 $$
 
 $$
