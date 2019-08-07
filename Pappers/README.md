@@ -37,7 +37,7 @@ the position and orientation of the end effector and the kp and kv the spring an
 controlling the force and controlling the position can act as Contradictory forces. for example, if we trained our model to preform drill a 2 mm hole in a metal shit while in reality the shit is made of wood then the force control by himself will create much deeper hole while the position will use much less force combining this two together we have to use hybrid control with parameter s to state which condition is more important and when.  
 Another and better approach to this problem is to find a function connecting between force and it’s kinematics or in its scientific name impedance. In this approach we can the write contact equation as a function of the kinematics (between the surface and the manipulator) and state that when equilibrium is achieved then there is static relation between force and position.
 
-$\lambda$
+$$\lambda$$
 
 $$ H(q)\ddot{q}+\underbrace{c(q,\dot{q})\dot{q}+G(q}_{h(q,\dot{q})})=\tau +{{J}^{T}}{{F}_{ext}} $$
  
