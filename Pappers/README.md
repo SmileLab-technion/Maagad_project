@@ -50,8 +50,8 @@ xd in this equation can be treated as “virtual” position and can understood 
 
 $$
 \begin{align}
- \underbrace{A}_{R}  \\
- \underbrace{A}_{R}  \\ 
+\underbrace{A}_{R} \\
+\underbrace{A}_{R} \\ 
 \end{align}
 $$
 
