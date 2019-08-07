@@ -36,7 +36,9 @@ the position and orientation of the end effector and the kp and kv the spring an
 controlling the force and controlling the position can act as Contradictory forces. for example, if we trained our model to preform drill a 2 mm hole in a metal shit while in reality the shit is made of wood then the force control by himself will create much deeper hole while the position will use much less force combining this two together we have to use hybrid control with parameter s to state which condition is more important and when.  
 Another and better approach to this problem is to find a function connecting between force and it’s kinematics or in its scientific name impedance. In this approach we can the write contact equation as a function of the kinematics (between the surface and the manipulator) and state that when equilibrium is achieved then there is static relation between force and position.
 
-$ H(q)\ddot{q}+\underbrace{c(q,\dot{q})\dot{q}+G(q}_{h(q,\dot{q})})=\tau +{{J}^{T}}{{F}_{ext}}$ 
+$$ 
+H(q)\ddot{q}+\underbrace{c(q,\dot{q})\dot{q}+G(q}_{h(q,\dot{q})})=\tau +{{J}^{T}}{{F}_{ext}}
+$$ 
 
 Insteed of looking on F external which we don't have information on we can look on it's complemantry $\[{{F}_{\operatorname{int}}}=-{{F}_{ext}}\]$. We can look on our tool as spring and damper connected to a mass.
 $ \[(ii)\,{{F}_{\operatorname{int}}}=K({{x}_{d}}-x)+B({{\dot{x}}_{d}}-\dot{x})+M{{\ddot{x}}_{d}}\]$  xd in this equation can be treated as “virtual” position and can understood as the position if the contact surface resistance would have been 0.
