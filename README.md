@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 mathjax: true
 graphics: yes
 ---
