@@ -63,7 +63,7 @@ $$\small (4)H(q){{J}^{-1}}(\ddot{X}-\dot{J}\dot{q})+c(q,\dot{q}){{J}^{-1}}\dot{X
 $\scriptsize (J^T)^{-1}H(q)J^{-1}=H* $ and $ \scriptsize (J^T)^{-1}(H(q)J^{-1}\dot{J}\dot{q}+c(q,\dot{q})J^{-1}\dot{X}+G(q))=h*$
 and we obtain the folowing equation:
 
-$$ (5) \tau-F_{int} = H*\ddot{x}+h*  $$
+$$ \small (5) \tau-F_{int} = H*\ddot{x}+h*  $$
 
 If we plug (2) into equation (5) we get the folowing:
 
