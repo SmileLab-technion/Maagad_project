@@ -50,8 +50,7 @@ xd in this equation can be treated as “virtual” position and can understood 
 
 $$
 \begin{align}
- & =\underbrace{A}_{R} \\
- & =\underbrace{A}_{R} \\ 
+ & =\underbrace{(J^T)^{-1}H(q)J^{-1}}_{H*}\ddot{X} \\
  & = \sqrt{\frac{73^2}{12^2}}\sqrt{\frac{73^2-1}{73^2}} \\
  & = \frac{73}{12}\sqrt{1 - \frac{1}{73^2}} \\ 
  & \approx \frac{73}{12}\left(1 - \frac{1}{2\cdot73^2}\right)
