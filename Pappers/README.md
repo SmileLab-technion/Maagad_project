@@ -38,7 +38,7 @@ controlling the force and controlling the position can act as Contradictory forc
 Another and better approach to this problem is to find a function connecting between force and it’s kinematics or in its scientific name impedance. In this approach we can the write contact equation as a function of the kinematics (between the surface and the manipulator) and state that when equilibrium is achieved then there is static relation between force and position.
 
 
-$$ \[(1)\,H(q)\ddot{q}+c(q,\dot{q})\dot{q}+G(q)=\tau -{{J}^{T}}{{F}_{int}}\] $$
+$$\normal{ (1) \,H(q)\ddot{q}+c(q,\dot{q})\dot{q}+G(q)=\tau -{{J}^{T}}{{F}_{int}}\ }$$
  
 
 Insteed of looking on F external which we don't have information on we can look on it's complemantry $ F_{int}=-F_{ext}$.
