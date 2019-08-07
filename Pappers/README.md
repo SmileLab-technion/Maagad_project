@@ -58,7 +58,7 @@ $ \dot{X}=J\dot{q},\ddot{X}=\dot{J}\dot{q}+J\ddot{q}\to \ddot{q}={{J}^{-1}}(\ddo
 
 $ (iiii)H(q){{J}^{-1}}(\ddot{X}-\dot{J}\dot{q})+c(q,\dot{q}){{J}^{-1}}\dot{X}+G(q)+{{J}^{T}}{{F}_{int}}=\tau $
 
-Lets define $\Bbb (J^T)^{-1}H(q)J^{-1}=H* $ and $\Bbb (J^T)^{-1}(H(q)J^{-1}\dot{J}\dot{q}+c(q,\dot{q})J^{-1}\dot{X}+G(q))=h*$
+Lets define $\Biggl (J^T)^{-1}H(q)J^{-1}=H* $ and $\Biggl (J^T)^{-1}(H(q)J^{-1}\dot{J}\dot{q}+c(q,\dot{q})J^{-1}\dot{X}+G(q))=h*$
 and we obtain the folowing equation:
 
 $ \tau-F_{int} = H*\ddot{x}+h* $
