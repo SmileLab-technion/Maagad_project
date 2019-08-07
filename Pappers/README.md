@@ -48,9 +48,7 @@ $$ (ii) F_{int}=K(x_d-x)+B(\dot{x_d}-\dot{x})+M\ddot{x_d} $$
 
 xd in this equation can be treated as “virtual” position and can understood as the position if the contact surface resistance would have been 0.
 
-$$
-\underbrace{(J^T)^{-1}H(q)J^{-1}}_{H*}\ddot{X}+\underbrace{(J^T)^{-1}(H(q)J^{-1}\dot{J}\dot{q}+c(q,\dot{q})J^{-1}\dot{X}+G(q))}_{h*} +F_int=\tau 
-$$
+
 
 ###### Finding $\tau$ :
 
@@ -60,35 +58,13 @@ $ \dot{X}=J\dot{q},\ddot{X}=\dot{J}\dot{q}+J\ddot{q}\to \ddot{q}={{J}^{-1}}(\ddo
 
 $ (iiii)H(q){{J}^{-1}}(\ddot{X}-\dot{J}\dot{q})+c(q,\dot{q}){{J}^{-1}}\dot{X}+G(q)+{{J}^{T}}{{F}_{int}}=\tau $
 
-Lets define $\underbrace{(J^T)^{-1}H(q)J^{-1}}_{H*}\ddot{X}$ and $ \underbrace{(J^T)^{-1}(H(q)J^{-1}\dot{J}\dot{q}+c(q,\dot{q})J^{-1}\dot{X}+G(q))}_{h*}$
+Lets define $(J^T)^{-1}H(q)J^{-1}=H* and (J^T)^{-1}(H(q)J^{-1}\dot{J}\dot{q}+c(q,\dot{q})J^{-1}\dot{X}+G(q))=h*$
+and we obtain the folowing equation:
 
-$ \tau-F_{int} = \underbrace{(J^T)^{-1}H(q)J^{-1}}_{H*}\ddot{X}$+
+$ \tau-F_{int} = H*\ddot{x}+h* $
 
-$ \underbrace{(J^T)^{-1}(H(q)J^{-1}\dot{J}\dot{q}+c(q,\dot{q})J^{-1}\dot{X}+G(q))}_{h*}$
+###### Impedance controll reduced to Inverse dynamics+PD when $\F_{int}=0$:
 
-
-$ \underbrace{(J^T)^{-1}H(q)J^{-1}}_{H*}\ddot{X}$
-$+\underbrace{(J^T)^{-1}(H(q)J^{-1}\dot{J}\dot{q}+c(q,\dot{q})J^{-1}\dot{X}+G(q))}_{h*} $ 
-
-
-
-$$ \underbrace{(J^T)^{-1}(H(q)J^{-1}\dot{J}\dot{q}+c(q,\dot{q})J^{-1}\dot{X}+G(q))}_{h*}  $$
-
-
-
- 
-
-$$
-\underbrace{(J^T)^{-1}H(q)J^{-1}}_{H*}\ddot{X}+\underbrace{(J^T)^{-1}(H(q)J^{-1}\dot{J}\dot{q}+c(q,\dot{q})J^{-1}+G(q))}_{h*}
-$$
-
-
-$$
-\underbrace{(J^T)^{-1}H(q)J^{-1}}_{H*}\ddot{X}-\underbrace{(J^T)^{-1}(H(q)J^{-1}\dot{J}\dot{q}+c(q,\dot{q})J^{-1} \\+G(q))}_{h*}\\
-+F_int=\tau 
-$$
-
-####### Impedance controll reduced to Inverse dynamics+PD when $\F_{int}=0$:
 $ \[(5)\,H*{{M}^{-1}}(-K({{x}_{d}}-x)-B({{\dot{x}}_{d}}-\dot{x}))-h*=\tau \]$ 
 
 $$
