@@ -44,7 +44,7 @@ $$\small(1) H(q)\ddot{q}+c(q,\dot{q})\dot{q}+G(q)=\tau -{{J}^{T}}{{F}_{int}}\ $$
 Insteed of looking on F external which we don't have information on we can look on it's complemantry $ F_{int}=-F_{ext}$.
 We can look on our tool as spring and damper connected to a mass.
 
-$$ (2) F_{int}=K(x_d-x)+B(\dot{x_d}-\dot{x})+M\ddot{x_d} \to \ddot{x_d}=M^{-1}(F_{int}-K(x_d-x)-B(\dot{x_d}-\dot{x})) $$
+$$\small (2) F_{int}=K(x_d-x)+B(\dot{x_d}-\dot{x})+M\ddot{x_d} \to \ddot{x_d}=M^{-1}(F_{int}-K(x_d-x)-B(\dot{x_d}-\dot{x})) $$
 
 xd in this equation can be treated as “virtual” position and can understood as the position if the contact surface resistance would have been 0.
 
@@ -52,11 +52,11 @@ xd in this equation can be treated as “virtual” position and can understood 
 
 #### Finding $\tau$ :
 
-$$ (3) H(q)\ddot{q}+c(q,\dot{q})\dot{q}+G(q)+J^{T}F_{int}=\tau $$
+$$\small (3) H(q)\ddot{q}+c(q,\dot{q})\dot{q}+G(q)+J^{T}F_{int}=\tau $$
 
-$$ \dot{X}=J\dot{q},\ddot{X}=\dot{J}\dot{q}+J\ddot{q}\to \ddot{q}={{J}^{-1}}(\ddot{X}-\dot{J}\dot{q}),\dot{q}={{J}^{-1}}\dot{X} $$
+$$\small \dot{X}=J\dot{q},\ddot{X}=\dot{J}\dot{q}+J\ddot{q}\to \ddot{q}={{J}^{-1}}(\ddot{X}-\dot{J}\dot{q}),\dot{q}={{J}^{-1}}\dot{X} $$
 
-$$ (4)H(q){{J}^{-1}}(\ddot{X}-\dot{J}\dot{q})+c(q,\dot{q}){{J}^{-1}}\dot{X}+G(q)+{{J}^{T}}{{F}_{int}}=\tau $$
+$$\small (4)H(q){{J}^{-1}}(\ddot{X}-\dot{J}\dot{q})+c(q,\dot{q}){{J}^{-1}}\dot{X}+G(q)+{{J}^{T}}{{F}_{int}}=\tau $$
 
 #### Let's define:
 
@@ -67,11 +67,11 @@ $$ (5) \tau-F_{int} = H*\ddot{x}+h*  $$
 
 If we plug (2) into equation (5) we get the folowing:
 
-$$(6) H{M}^{-1}(F_{int}-K(x_d-x)-B(\dot{x_d}-\dot{x}))-h*+{F}_{int}=\tau $$
+$$\small (6) H{M}^{-1}(F_{int}-K(x_d-x)-B(\dot{x_d}-\dot{x}))-h*+{F}_{int}=\tau $$
 
 
 #### Impedance controll reduced to Inverse dynamics+PD when $\scriptsize F_{int}=0$:
 
 Let's plug (5) into (1) while setting $ \scriptsize {F}_{int} $ to 0:
 
-$$\mathtt H{M}^{-1}(-K(x_d-x)-B(\dot{x_d}-\dot{x}))-h*=H*\ddot{x}+h* \to  H{M}^{-1}(\ddot{x}+K(x_d-x)+B(\dot{x_d})=0 $$ 
+$$\small H{M}^{-1}(-K(x_d-x)-B(\dot{x_d}-\dot{x}))-h*=H*\ddot{x}+h* \to  H{M}^{-1}(\ddot{x}+K(x_d-x)+B(\dot{x_d})=0 $$ 
