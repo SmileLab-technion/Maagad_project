@@ -62,7 +62,7 @@ $ (iiii)H(q){{J}^{-1}}(\ddot{X}-\dot{J}\dot{q})+c(q,\dot{q}){{J}^{-1}}\dot{X}+G(
 
 $$ \underbrace{(J^T)^{-1}H(q)J^{-1}}_{H*}\ddot{X}$$
 
-$$ \underbrace{(J^T)^{-1}(H(q)J^{-1}\dot{J}\dot{q}+c(q,\dot{q})J^{-1} \\+G(q))}_{h*} $$
+$$ \underbrace{(J^T)^{-1}(H(q)J^{-1}\dot{J}\dot{q}+c(q,\dot{q})J^{-1}+G(q))}_{h*} $$
 
 $$
 \underbrace{(J^T)^{-1}H(q)J^{-1}}_{H*}\ddot{X}-\underbrace{(J^T)^{-1}(H(q)J^{-1}\dot{J}\dot{q}+c(q,\dot{q})J^{-1} \\+G(q))}_{h*}\\
