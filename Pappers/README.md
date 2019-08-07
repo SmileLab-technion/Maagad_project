@@ -31,6 +31,7 @@ the position and orientation of the end effector and the kp and kv the spring an
 
 <hr />
 <a name='ADIC'></a>
+
 ##### Accurace Dilemma Impedance Control summarize:
 
 controlling the force and controlling the position can act as Contradictory forces. for example, if we trained our model to preform drill a 2 mm hole in a metal shit while in reality the shit is made of wood then the force control by himself will create much deeper hole while the position will use much less force combining this two together we have to use hybrid control with parameter s to state which condition is more important and when.  
