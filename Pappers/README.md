@@ -30,7 +30,7 @@ action. The final results indicate that impedance controller achive the best res
 the position and orientation of the end effector and the kp and kv the spring and damper coef.  
 
 <hr />
-
+$\lambda$
 <a name='ADIC'></a>
 ##### Accurace Dilemma Impedance Control summarize:
 
