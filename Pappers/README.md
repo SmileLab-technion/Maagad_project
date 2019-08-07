@@ -22,7 +22,7 @@ Resent research in RL has focused on "observations to torques". using the torque
 
 The writer of the paper sugest the end-effector space as the action space. The chllenge working in this space is the transition
 between end-effector and the joints representation, this transition is usally done using inverse kinematics. Inverse
-kinamatics is a optimization process(there is more than one solution for end-effector position) which is time consuming and
+kinamatics is aמ optimization process(there is more than one solution for end-effector position) which is time consuming and
 as some accuracy disadventage. The writer of the paper solve this problem by learning the controller of the robot, this method 
 doesn't need to go throw inverse kinematics. The paper compares diffrent kinds of controllers and compare them to the used torque
 action. The final results indicate that impedance controller achive the best results of them all. Impedance controll mean you learn
