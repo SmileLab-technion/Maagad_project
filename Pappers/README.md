@@ -74,9 +74,4 @@ $$(6) H{M}^{-1}(F_{int}-K(x_d-x)-B(\dot{x_d}-\dot{x}))-h*+{F}_{int}=\tau $$
 
 Let's plug (5) into (1) while setting $ \scriptsize {F}_{int} $ to 0:
 
-$$  H{M}^{-1}(-K(x_d-x)-B(\dot{x_d}-\dot{x}))-h*=H*\ddot{x}+h* \to  H{M}^{-1}(\ddot{x}-K(x_d-x)-B(\dot{x_d})=0 $$ 
-
-$$
- & (i)+(5)\,H*{{M}^{-1}}(-K({{x}_{d}}-x)-B({{{\dot{x}}}_{d}}-\dot{x}))+\cancel{h*}=H*\ddot{X}+\cancel{h*} \\ 
- & H*(\ddot{X}+{{M}^{-1}}B({{{\dot{x}}}_{d}}-\dot{x})+{{M}^{-1}}K({{x}_{d}}-x))=0 \\ 
-$$
+$$\mathbf  H{M}^{-1}(-K(x_d-x)-B(\dot{x_d}-\dot{x}))-h*=H*\ddot{x}+h* \to  H{M}^{-1}(\ddot{x}+K(x_d-x)+B(\dot{x_d})=0 $$ 
