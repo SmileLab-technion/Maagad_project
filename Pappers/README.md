@@ -60,6 +60,7 @@ $ \dot{X}=J\dot{q},\ddot{X}=\dot{J}\dot{q}+J\ddot{q}\to \ddot{q}={{J}^{-1}}(\ddo
 
 $ (iiii)H(q){{J}^{-1}}(\ddot{X}-\dot{J}\dot{q})+c(q,\dot{q}){{J}^{-1}}\dot{X}+G(q)+{{J}^{T}}{{F}_{int}}=\tau $
 
+Lets define $\underbrace{(J^T)^{-1}H(q)J^{-1}}_{H*}\ddot{X}$ and $ \underbrace{(J^T)^{-1}(H(q)J^{-1}\dot{J}\dot{q}+c(q,\dot{q})J^{-1}\dot{X}+G(q))}_{h*}$
 
 $ \tau-F_{int} = \underbrace{(J^T)^{-1}H(q)J^{-1}}_{H*}\ddot{X}$+
 
