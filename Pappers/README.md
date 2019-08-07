@@ -70,8 +70,8 @@ If we plug (2) into equation (5) we get the folowing:
 $$(6) H{M}^{-1}(F_{int}-K(x_d-x)-B(\dot{x_d}-\dot{x}))-h*+{F}_{int}=\tau $$
 
 
-##### Impedance controll reduced to Inverse dynamics+PD when $\scriptsize F_{int}=0$:
+#### Impedance controll reduced to Inverse dynamics+PD when $\scriptsize F_{int}=0$:
 
 Let's plug (5) into (1) while setting $ \scriptsize {F}_{int} $ to 0:
 
-$$\mathbf  H{M}^{-1}(-K(x_d-x)-B(\dot{x_d}-\dot{x}))-h*=H*\ddot{x}+h* \to  H{M}^{-1}(\ddot{x}+K(x_d-x)+B(\dot{x_d})=0 $$ 
+$$\mathtt H{M}^{-1}(-K(x_d-x)-B(\dot{x_d}-\dot{x}))-h*=H*\ddot{x}+h* \to  H{M}^{-1}(\ddot{x}+K(x_d-x)+B(\dot{x_d})=0 $$ 
