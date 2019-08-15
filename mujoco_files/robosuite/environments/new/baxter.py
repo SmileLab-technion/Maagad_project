@@ -251,6 +251,10 @@ class BaxterEnv(MujocoEnv):
         self._gripper_visualization()
         return ret
 
+
+
+
+
     def _get_observation(self):
         """
         Returns an OrderedDict containing observations [(name_string, np.array), ...].
@@ -350,7 +354,7 @@ class BaxterEnv(MujocoEnv):
         action = np.zeros((self.dof))
         F_right_arm = np.zeros((6))
         F_left_arm = np.zeros((6))
-
+        arms_cliping_lower=np.array([0.3,-0.8,0.3])
         if self.action_space_def == "PD":
             temp_param=np.zeros((20))
             temp_param[:6]=param[:6]
@@ -371,12 +375,13 @@ class BaxterEnv(MujocoEnv):
          left_C_pos[0,0],left_C_pos[1,1],left_C_pos[2,2], left_K_ori[0,0],left_K_ori[1,1],left_K_ori[2,2],left_C_ori[0,0],left_C_ori[1,1],left_C_ori[2,2]] = param[18:]
 
         right_pos_desired = np.array([right_desired_x, right_desired_y, right_desired_z])
-        right_pos_desired=np.clip(right_pos_desired,-1,1)
+        right_pos_desired=np.clip(right_pos_desired,arms_cliping_lower,0.8)
+
         right_ori_desired = np.array([right_desired_teta_x, right_desired_teta_y, right_desired_teta_z])
         right_ori_desired =np.clip(right_ori_desired,-np.pi,np.pi)
 
         left_pos_desired = np.array([left_desired_x, left_desired_y, left_desired_z])
-        left_pos_desired = np.clip(left_pos_desired, -1, 1)
+        left_pos_desired = np.clip(left_pos_desired, arms_cliping_lower, 0.8)
         left_ori_desired = np.array([left_desired_teta_x, left_desired_teta_y, left_desired_teta_z])
         left_ori_desired = np.clip(left_ori_desired, -np.pi, np.pi)
 
@@ -395,10 +400,10 @@ class BaxterEnv(MujocoEnv):
 
 
         F_right_arm[:3] = (np.dot(right_K_pos, right_pos_desired - pos_right_now) + np.dot(right_C_pos, -v_right_now))
-        F_right_arm[3:] = (np.dot(right_K_ori, right_ori_desired - ori_right_now) + np.dot(right_C_ori, -w_right_now))
+        F_right_arm[3:] = 0*(np.dot(right_K_ori, right_ori_desired - ori_right_now) + np.dot(right_C_ori, -w_right_now))
 
         F_left_arm[:3] = (np.dot(left_K_pos, left_pos_desired - pos_left_now) + np.dot(left_C_pos, -v_left_now))
-        F_left_arm[3:] = (np.dot(left_K_ori, left_ori_desired - ori_left_now) + np.dot(left_C_ori, -w_left_now))
+        F_left_arm[3:] = 0*(np.dot(left_K_ori, left_ori_desired - ori_left_now) + np.dot(left_C_ori, -w_left_now))
 
 
         right_jacp, right_jacr = self.return_jacobian('right_hand')
@@ -420,7 +425,7 @@ class BaxterEnv(MujocoEnv):
         H_L_left_hand = np.dot(np.dot(np.linalg.pinv(J_L_left_hand.T), H_use[8:, 8:]), np.linalg.pinv(J_L_left_hand))
         H_A_left_hand = np.dot(np.dot(np.linalg.pinv(J_A_left_hand.T), H_use[8:, 8:]), np.linalg.pinv(J_A_left_hand))
 
-        action[:7] =np.dot(J_L_right_hand.T,np.dot(H_L_right_hand, F_right_arm[:3])) + np.dot(J_A_left_hand.T, np.dot(H_A_right_hand, F_right_arm[3:]))
+        action[:7] =np.dot(J_L_right_hand.T,np.dot(H_L_right_hand, F_right_arm[:3])) + np.dot(J_A_right_hand.T, np.dot(H_A_right_hand, F_right_arm[3:]))
         action[7:]= np.dot(J_L_left_hand.T,np.dot(H_L_left_hand, F_left_arm[:3])) + np.dot(J_A_left_hand.T, np.dot(H_A_left_hand, F_left_arm[3:]))
         return np.expand_dims(action, axis=0)
 
@@ -634,3 +639,38 @@ class BaxterEnv(MujocoEnv):
     @property
     def observation_space_shape(self):
         return self._get_observation()['robot-state'].shape[0]
+
+    def _PD_feedback(self, action):
+        """ overwite by super"""
+        arms_cliping_lower = np.array([0.3, -0.8, 0.3])
+        [right_desired_x, right_desired_y, right_desired_z, right_desired_teta_x, right_desired_teta_y,
+         right_desired_teta_z] = action[:6]
+
+        [left_desired_x, left_desired_y, left_desired_z, left_desired_teta_x, left_desired_teta_y,
+         left_desired_teta_z] = action[18:24]
+
+        right_pos_desired = np.array([right_desired_x, right_desired_y, right_desired_z])
+        right_pos_desired = np.clip(right_pos_desired, arms_cliping_lower, 0.8)
+        right_ori_desired = np.array([right_desired_teta_x, right_desired_teta_y, right_desired_teta_z])
+        right_ori_desired = np.clip(right_ori_desired, -np.pi, np.pi)
+
+        left_pos_desired = np.array([left_desired_x, left_desired_y, left_desired_z])
+        left_pos_desired = np.clip(left_pos_desired, arms_cliping_lower, 0.8)
+        left_ori_desired = np.array([left_desired_teta_x, left_desired_teta_y, left_desired_teta_z])
+        left_ori_desired = np.clip(left_ori_desired, -np.pi, np.pi)
+
+        pos_right_now = self.sim.data.get_body_xipos('right_hand')
+        quat_right_hand = self.sim.data.get_body_xquat('right_hand')
+        ori_right_now = self.quat_to_angles(quat_right_hand)
+
+        pos_left_now = self.sim.data.get_body_xipos('left_hand')
+        quat_left_hand = self.sim.data.get_body_xquat('left_hand')
+        ori_left_now = self.quat_to_angles(quat_left_hand)
+
+        right_hand_error = np.linalg.norm(pos_right_now - right_pos_desired)+ np.linalg.norm(ori_right_now - right_ori_desired)
+        left_hand_error =  np.linalg.norm(pos_left_now - left_pos_desired)+np.linalg.norm(ori_left_now - left_ori_desired)
+
+        #self.viewer.viewer.add_marker(pos=right_pos_desired, label=str(1))
+        #self.viewer.viewer.add_marker(pos=left_pos_desired, label=str(2))
+
+        return right_hand_error,left_hand_error
