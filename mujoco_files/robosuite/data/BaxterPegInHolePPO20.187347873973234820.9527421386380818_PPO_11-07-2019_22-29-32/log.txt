@@ -1,2 +1,0 @@
-Time	Iteration	AverageReturn	StdReturn	MaxReturn	MinReturn	EpLenMean	EpLenStd	Loss	Learning_rate	Exploration
-164.4004032611847	0	481.0450821572693	49.09598776978622	658.4315671880007	391.3818088334711	200.0	0.0	136.33897	0.0005	1.0
